@@ -7,9 +7,11 @@ function Task(props) {
                 {props.taskList.map((list) => (
                     
                 <li key={list.id} className="flex gap-2">
-                    <button onClick={() => props.onTaskClick(list.id)} className="bg-slate-400 text-left w-full text-white p-2 rounded-md ">{list.title}</button> 
+                    <button onClick={() => props.onTaskClick(list.id)} className={`bg-slate-400 text-left w-full text-white p-2 rounded-md ${list.isComplet && 'line-through'}`}>{list.title}</button> 
 
                     <button className="bg-slate-400 p-2 rounded-md text-white">Ver detalhes</button>
+
+                    <button onClick={() => props.deleteTask(list.id)} className="bg-slate-400 p-2 rounded-md text-white"> deletar</button>
                 </li>
                  ))
                 }
