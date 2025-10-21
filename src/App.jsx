@@ -45,7 +45,7 @@ function deleteTask(taskId) {
 
   return (
     <div className='h-screen w-screen bg-slate-500 flex justify-center p-6'>
-      <div className='w-[500px]'>
+      <div className='w-[500px] space-y-4'>
         <h1 className='text-3xl text-slate-100 font-bold text-cenetr'>Gerenciador de Tarefas</h1>
         <AddTask></AddTask>
           <Task taskList={list} onTaskClick={onTaskClick} deleteTask={deleteTask}></Task>
