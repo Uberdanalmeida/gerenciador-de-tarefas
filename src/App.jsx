@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import AddTask from './components/AddTask'
 import Task from './components/Task'
+import { v4 } from 'uuid'
 
 function App() {
 
@@ -43,12 +44,24 @@ function deleteTask(taskId) {
   setList(newTask)
 }
 
+function AddTaskSubmit (title, description) {
+
+  const newTask = {
+      id: v4(),
+      title,
+      description,
+      isComplet: false
+  };
+
+  setList([...list, newTask])
+}
+
   return (
     <div className='h-screen w-screen bg-slate-500 flex justify-center p-6'>
       <div className='w-[500px] space-y-4'>
-        <h1 className='text-3xl text-slate-100 font-bold text-cenetr'>Gerenciador de Tarefas</h1>
-        <AddTask></AddTask>
-          <Task taskList={list} onTaskClick={onTaskClick} deleteTask={deleteTask}></Task>
+        <h1 className='text-3xl text-slate-100 font-bold text-center'>Gerenciador de Tarefas</h1>
+        <AddTask AddTaskSubmit={AddTaskSubmit}></AddTask>
+        <Task taskList={list} onTaskClick={onTaskClick} deleteTask={deleteTask}></Task>
       </div>
     </div>
   )
