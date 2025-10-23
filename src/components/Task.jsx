@@ -5,13 +5,13 @@ import { useNavigate } from "react-router-dom";
 
 function Task(props) {
 
-    const navegate = useNavigate()
+    const navigate = useNavigate()
     const query = new URLSearchParams()
     query.set("title", list.title)
     query.set("description", list.description)
 
     function detaiClick(list) {
-        navegate(`/list?${query.toString()}`)
+        navigate(`/list?${query.toString()}`)
     }
 
     return(
