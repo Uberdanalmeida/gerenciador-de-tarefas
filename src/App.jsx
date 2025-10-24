@@ -3,6 +3,7 @@ import './App.css'
 import AddTask from './components/AddTask'
 import Task from './components/Task'
 import { v4 } from 'uuid'
+import { data } from 'react-router-dom'
 
 function App() {
 
@@ -13,6 +14,17 @@ JSON.parse(localStorage.getItem("list")) || []
 useEffect(() => {
   localStorage.setItem("list", JSON.stringify(list))
 }, [list])
+
+useEffect(() => {
+  async function fetchList() {
+    const response = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=10', {
+    method: "GET"
+  })
+  const data = await response.json()
+  setList(data)
+  }
+  // fetchList()
+}, [])
 
 function onTaskClick(taskId) {
   const newTask = list.map(list => {
