@@ -2,6 +2,7 @@ import { list } from "postcss"
 import { FaChevronRight } from "react-icons/fa";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import Button from "./Button";
 
 function Task(props) {
 
@@ -22,9 +23,9 @@ function Task(props) {
                 <li key={list.id} className="flex gap-2">
                     <button onClick={() => props.onTaskClick(list.id)} className={`bg-slate-400 text-left w-full text-white p-2 rounded-md ${list.isComplet && 'line-through'}`}>{list.title}</button> 
 
-                    <button onClick={() => detaiClick(list)} className="bg-slate-400 p-2 rounded-md text-white"><FaChevronRight /></button>
+                    <Button onClick={() => detaiClick(list)}><FaChevronRight /></Button>
 
-                    <button onClick={() => props.deleteTask(list.id)} className="bg-slate-400 p-2 rounded-md text-white"><FaRegTrashAlt /></button>
+                    <Button onClick={() => props.deleteTask(list.id)} ><FaRegTrashAlt /></Button>
                 </li>
                  ))
                 }

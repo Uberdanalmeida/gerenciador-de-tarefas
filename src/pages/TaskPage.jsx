@@ -1,5 +1,6 @@
 import { useNavigate, useSearchParams } from "react-router-dom"
 import { FaChevronLeft } from "react-icons/fa";
+import Title from "../components/Title";
 
 function TaskPage() {
 
@@ -13,8 +14,7 @@ function TaskPage() {
             <div className='w-[500px] space-y-4'>
             <div className="flex justify-center relative mb-6">
                 <button onClick={() => navigate(-1)} className="absolute left-0 top-0 bottom-0 text-slate-100"><FaChevronLeft /></button>
-                <h1 className='text-3xl text-slate-100 font-bold text-center'>Detalhe da tarefa          
-                </h1>
+                <Title>Detalhes da tarefa</Title>
             </div>
             <div className="bg-slate-200 p-4 rounded-md">
                 <h2 className="text-3xl font-bold text-slate-600">{title}</h2>
