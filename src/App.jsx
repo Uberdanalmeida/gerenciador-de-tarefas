@@ -3,7 +3,6 @@ import './App.css'
 import AddTask from './components/AddTask'
 import Task from './components/Task'
 import { v4 } from 'uuid'
-import { data } from 'react-router-dom'
 import Title from './components/Title'
 
 function App() {
