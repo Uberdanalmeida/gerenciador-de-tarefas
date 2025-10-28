@@ -1,17 +1,16 @@
-import { list } from "postcss"
-import { FaChevronRight } from "react-icons/fa";
-import { FaRegTrashAlt } from "react-icons/fa";
+
+import { FaChevronRight, FaRegTrashAlt, FaCheckCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 
-function Task(props) {
+function Task(props){
 
     const navigate = useNavigate()
-    const query = new URLSearchParams()
-    query.set("title", list.title)
-    query.set("description", list.description)
 
     function detaiClick(list) {
+        const query = new URLSearchParams()
+        query.set("title", list.title)
+        query.set("description", list.description)
         navigate(`/list?${query.toString()}`)
     }
 
@@ -21,7 +20,7 @@ function Task(props) {
                 {props.taskList.map((list) => (
                     
                 <li key={list.id} className="flex gap-2">
-                    <button onClick={() => props.onTaskClick(list.id)} className={`bg-slate-400 text-left w-full text-white p-2 rounded-md ${list.isComplet && 'line-through'}`}>{list.title}</button> 
+                    <button onClick={() => props.onTaskClick(list.id)} className={`bg-slate-400 text-left w-full flex items-center gap-2 text-white p-2 rounded-md ${list.isComplet && 'line-through'}`}>{list.isComplet && <FaCheckCircle />}{list.title}</button> 
 
                     <Button onClick={() => detaiClick(list)}><FaChevronRight /></Button>
 
