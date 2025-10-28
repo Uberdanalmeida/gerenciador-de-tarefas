@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import AddTask from "./components/AddTask";
 import Task from "./components/Task";
-import { v4 } from "uuid";
+import { v4 as uuid } from "uuid";
 import Title from "./components/Title";
 
 function App() {
@@ -45,7 +45,7 @@ function App() {
 
   function AddTaskSubmit(title, description) {
     const newTask = {
-      id: v4(),
+      id: uuid(),
       title,
       description,
       isComplet: false,
