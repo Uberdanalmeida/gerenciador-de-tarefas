@@ -1,6 +1,6 @@
 # 📝 Gerenciador de Tarefas
 
-![profile](./imagem/gerenciador-tarefas.png)
+![Gerenciador-de-tarefas](imagem/gerenciador-tarefas.png)
 
 Um simples Gerenciador de Tarefas construído com **React.js** e estilizado com **Tailwind CSS** (implícito pelas classes). Este aplicativo permite adicionar, visualizar, marcar como concluído e excluir tarefas, além de armazenar o estado das tarefas no **LocalStorage** do navegador.
 
