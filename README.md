@@ -1,16 +1,38 @@
-# React + Vite
+# 📝 Gerenciador de Tarefas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um simples Gerenciador de Tarefas construído com **React.js** e estilizado com **Tailwind CSS** (implícito pelas classes). Este aplicativo permite adicionar, visualizar, marcar como concluído e excluir tarefas, além de armazenar o estado das tarefas no **LocalStorage** do navegador.
 
-Currently, two official plugins are available:
+## ✨ Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Adicionar Tarefa:** Insira um título e uma descrição para criar uma nova tarefa.
+* **Visualizar Tarefas:** Lista todas as tarefas ativas e concluídas.
+* **Marcar como Concluída:** Clique no título da tarefa para alternar seu status de conclusão (com um efeito de `line-through`).
+* **Detalhes da Tarefa:** Clique no botão de seta (`>`) para navegar para uma página dedicada com os detalhes (título e descrição) da tarefa.
+* **Excluir Tarefa:** Use o ícone de lixeira para remover uma tarefa da lista.
+* **Persistência de Dados:** As tarefas são salvas no `localStorage`, garantindo que elas permaneçam após o recarregamento da página.
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ⚙️ Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+ ⚛️ **React.js** | Biblioteca principal para a UI |
+ 🧭 **React Router DOM** | Navegação entre páginas |
+ 🧾 **UUID** | Geração de IDs únicos para cada tarefa |
+ 🎨 **Tailwind CSS** | Estilização rápida e moderna |
+ 🔤 **React Icons** | Ícones bonitos e leves para botões |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Dependencias
+
+"dependencies": {
+  "react": "^18.x",
+  "react-dom": "^18.x",
+  "react-router-dom": "^6.x",
+  "react-icons": "^4.x",
+  "uuid": "^9.x",
+  "tailwindcss": "^3.x"
+}
+
+👨‍💻 Autor
+
+Feito com ❤️ e ☕ por [Uberdan Almeida]
+
+📦 GitHub: https://github.com/Uberdanalmeida 
